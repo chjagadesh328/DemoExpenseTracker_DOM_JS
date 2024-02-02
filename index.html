@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Expense Tracker</title>
+        <style>
+          header {
+                background-color: #c3dd75;
+                color:#801818;
+                text-align: center;
+                height: 75px;
+                width: 100%;
+                padding-top: 20px;
+                padding-right: 50px;
+                padding-bottom: 50px;
+                padding-left: 60px;
+                }   
+            button {
+                position : relative;
+                width: 200px;
+                padding: 15px 0;
+                text-align:center;
+                margin: 20px 10px;
+                font-weight: bold;
+                border: 2px solid #131513;
+                background:transparent ;
+                color:#2915b0;
+                cursor: pointer;
+                overflow: hidden;
+                /* color:#fff;
+                padding :8px 22px;
+                border-radius:6px;
+                background: #7d2ae8;
+                transition: all 0.2s ease; */
+            }
+            /* ul.listofitems {
+                list-style-type: none;
+                margin: 1px;
+                padding: 10px;
+                } */
+
+               
+        </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+       <header><h3>EXPENSE TRACKER</h3></header>
+       <div class="container mt-4">
+        <!-- <h2 class="text-center mb-4">Expense Tracker</h2> -->
+        <form onsubmit="saveToLocalStorage(event)">
+            <div class="mb-3">
+                <label for="amount" class="form-label" style="font-weight: bold">Choose Expense Amount : </label>
+                <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter amount spent">
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label" style="font-weight: bold">Choose Description </label>
+                <input type="text" class="form-control" id="desc" name="desc" placeholder="Ex: movie ticket">
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label" style="font-weight: bold">Choose Category :</label>
+                <select class="form-select" id="category" name="category">
+                    <option></option>
+                    <option value="movie">Movie</option>
+                    <option value="Home Accessories">Home Accessories </option>
+                    <option value="Groceries" >Grocerie's </option>
+                    <option value="Clothing" >Clothing</option>
+                    <option value="Daily Needs" >Daily Need's </option>
+                    <option value="Recharge" >Mobile Recharge</option>
+                    <option value="Junk Food">Outside Food </option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Expenses</button>
+
+        </form>
+        </div>
+        <ul id='listofitems'> </ul>
+         <!-- Include Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+        <script src="index.js" async defer></script>
+    </body>
+</html>
